@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <NonVisualComponents>
+    <Menu class="javax.swing.JMenuBar" name="Menu_Bar">
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="Menu_Bar.setBackground(cyan);"/>
+      </AuxValues>
+      <SubComponents>
+        <Menu class="javax.swing.JMenu" name="File_Menu">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="File"/>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="JMenuItem quitItem = new JMenuItem(&quot;Quit&quot;);&#xa;        quitItem.addActionListener(new ActionListener(){&#xa;            @Override&#xa;            public void actionPerformed(ActionEvent ae) {&#xa;                &#xa;                dispatchEvent(new WindowEvent(imageGUI.this, WindowEvent.WINDOW_CLOSING));&#xa;                &#xa;                try&#xa;                {&#xa;                    File file = new File(&quot;sounds/Click.wav&quot;);&#xa;                    AudioInputStream ais = AudioSystem.getAudioInputStream(file);&#xa;                    Clip clip = AudioSystem.getClip();&#xa;&#xa;                    clip.open(ais);&#xa;                    clip.start();&#xa;                }&#xa;                catch(Exception e)&#xa;                {&#xa;                    messageLabel.setText(&quot;Error loading sound.&quot;);&#xa;                }&#xa;            }&#xa;        });&#xa;        quitItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_Q, InputEvent.CTRL_MASK));&#xa;        File_Menu.add(quitItem);&#xa;&#xa;JMenuItem saveItem = new JMenuItem(&quot;Save&quot;);&#xa;        saveItem.addActionListener(new ActionListener(){&#xa;            @Override&#xa;            public void actionPerformed(ActionEvent ae) {&#xa;                &#xa;                saveButtonActionPerformed(ae);&#xa;                &#xa;                try&#xa;                {&#xa;                    File file = new File(&quot;sounds/Click.wav&quot;);&#xa;                    AudioInputStream ais = AudioSystem.getAudioInputStream(file);&#xa;                    Clip clip = AudioSystem.getClip();&#xa;&#xa;                    clip.open(ais);&#xa;                    clip.start();&#xa;                }&#xa;                catch(Exception e)&#xa;                {&#xa;                    messageLabel.setText(&quot;Error loading sound.&quot;);&#xa;                }&#xa;            }&#xa;        });&#xa;        saveItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_S, InputEvent.CTRL_MASK));&#xa;        File_Menu.add(saveItem);&#xa;&#xa;JMenuItem openItem = new JMenuItem(&quot;Open&quot;);&#xa;        openItem.addActionListener(new ActionListener(){&#xa;            @Override&#xa;            public void actionPerformed(ActionEvent ae) {&#xa;                &#xa;                openButtonActionPerformed(ae);&#xa;                &#xa;                try&#xa;                {&#xa;                    File file = new File(&quot;sounds/Click.wav&quot;);&#xa;                    AudioInputStream ais = AudioSystem.getAudioInputStream(file);&#xa;                    Clip clip = AudioSystem.getClip();&#xa;&#xa;                    clip.open(ais);&#xa;                    clip.start();&#xa;                }&#xa;                catch(Exception e)&#xa;                {&#xa;                    messageLabel.setText(&quot;Error loading sound.&quot;);&#xa;                }&#xa;            }&#xa;        });&#xa;        openItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_O, InputEvent.CTRL_MASK));&#xa;        File_Menu.add(openItem);&#xa;&#xa;JMenuItem resetItem = new JMenuItem(&quot;Reset Image&quot;);&#xa;        resetItem.addActionListener(new ActionListener(){&#xa;            @Override&#xa;            public void actionPerformed(ActionEvent ae) {&#xa;                &#xa;                posterImage_Updated.setImage(posterImage.getBufferedImage());&#xa;                &#xa;                try&#xa;                {&#xa;                    File file = new File(&quot;sounds/Click.wav&quot;);&#xa;                    AudioInputStream ais = AudioSystem.getAudioInputStream(file);&#xa;                    Clip clip = AudioSystem.getClip();&#xa;&#xa;                    clip.open(ais);&#xa;                    clip.start();&#xa;                }&#xa;                catch(Exception e)&#xa;                {&#xa;                    messageLabel.setText(&quot;Error loading sound.&quot;);&#xa;                }&#xa;            }&#xa;        });&#xa;        resetItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_R, InputEvent.CTRL_MASK));&#xa;        File_Menu.add(resetItem);"/>
+          </AuxValues>
+        </Menu>
+      </SubComponents>
+    </Menu>
+  </NonVisualComponents>
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+      <Color blue="ff" green="ff" id="white" palette="1" red="ff" type="palette"/>
+    </Property>
+    <Property name="resizable" type="boolean" value="false"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="menuBar" type="java.lang.String" value="Menu_Bar"/>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="Apply_Button" max="32767" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="Gaussian_Filter_Label" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="openButton" alignment="0" pref="200" max="32767" attributes="0"/>
+                          <Component id="posterImage" alignment="0" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              <Component id="posterImage_Updated" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="saveButton" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="Convert_To_Grey_Scales_Label" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="Convert_To_Grey_Scales_Check_Box" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="Box_Filter_Label" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="32767" attributes="0"/>
+                                      <Component id="Box_Filter_Check_Box" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                      <Component id="Gaussian_Filter_Check_Box" min="-2" max="-2" attributes="0"/>
+                                      <Group type="102" attributes="0">
+                                          <Component id="Edge_Detection_Filter_Label" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="Edge_Detection_Filter_Check_Box" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                              <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                              <Component id="Sharpen_Label" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                              <Component id="Sharpen_Check_Box" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace min="0" pref="59" max="32767" attributes="0"/>
+                      <Component id="messageLabel" min="-2" pref="350" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="60" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="Gamma_Correction_Label" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                      <Component id="Gamma_Correction_Slider" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" attributes="0">
+              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="posterImage" max="32767" attributes="0"/>
+                  <Component id="posterImage_Updated" max="32767" attributes="0"/>
+              </Group>
+              <EmptySpace max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="saveButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="openButton" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="messageLabel" min="-2" pref="19" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="Box_Filter_Check_Box" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="Box_Filter_Label" min="-2" max="-2" attributes="0"/>
+                  <Component id="Sharpen_Label" min="-2" max="-2" attributes="0"/>
+                  <Component id="Sharpen_Check_Box" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="Gaussian_Filter_Label" min="-2" max="-2" attributes="0"/>
+                  <Component id="Gaussian_Filter_Check_Box" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="Edge_Detection_Filter_Label" min="-2" max="-2" attributes="0"/>
+                  <Component id="Edge_Detection_Filter_Check_Box" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                      <Component id="Gamma_Correction_Label" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="Gamma_Correction_Slider" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Component id="Convert_To_Grey_Scales_Label" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                      <Component id="Apply_Button" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Component id="Convert_To_Grey_Scales_Check_Box" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JLabel" name="messageLabel">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="saveButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Save"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="saveButtonActionPerformed"/>
+      </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="saveButton.setBackground(white);"/>
+      </AuxValues>
+    </Component>
+    <Container class="ImagePanel" name="posterImage_Updated">
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <EmptySpace min="0" pref="200" max="32767" attributes="0"/>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+    </Container>
+    <Container class="ImagePanel" name="posterImage">
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <EmptySpace min="0" pref="200" max="32767" attributes="0"/>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+    </Container>
+    <Component class="javax.swing.JButton" name="openButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Open"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="openButtonActionPerformed"/>
+      </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="openButton.setBackground(white);"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Box_Filter_Label">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Box Filter:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Gaussian_Filter_Label">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Gaussian Filter:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Edge_Detection_Filter_Label">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Edge Detection Filter:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Gamma_Correction_Label">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Gamma Correction:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Convert_To_Grey_Scales_Label">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Convert to Grey Scales:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="Apply_Button">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Apply"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Apply_ButtonActionPerformed"/>
+      </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="Apply_Button.setBackground(white);"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JCheckBox" name="Box_Filter_Check_Box">
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="Box_Filter_Check_Box.setBackground(white);"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JCheckBox" name="Gaussian_Filter_Check_Box">
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="Gaussian_Filter_Check_Box.setBackground(white);"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JCheckBox" name="Edge_Detection_Filter_Check_Box">
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="Edge_Detection_Filter_Check_Box.setBackground(white);"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JCheckBox" name="Convert_To_Grey_Scales_Check_Box">
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="Convert_To_Grey_Scales_Check_Box.setBackground(white);"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JSlider" name="Gamma_Correction_Slider">
+      <Properties>
+        <Property name="maximum" type="int" value="200"/>
+        <Property name="paintLabels" type="boolean" value="true"/>
+        <Property name="paintTicks" type="boolean" value="true"/>
+        <Property name="snapToTicks" type="boolean" value="true"/>
+        <Property name="toolTipText" type="java.lang.String" value=""/>
+        <Property name="value" type="int" value="100"/>
+        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+          <Color id="Default Cursor"/>
+        </Property>
+        <Property name="requestFocusEnabled" type="boolean" value="false"/>
+        <Property name="valueIsAdjusting" type="boolean" value="true"/>
+        <Property name="verifyInputWhenFocusTarget" type="boolean" value="false"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="Gamma_Correction_Slider.setBackground(white);"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Sharpen_Label">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Sharpen:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JCheckBox" name="Sharpen_Check_Box">
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="Sharpen_Check_Box.setBackground(white);"/>
+      </AuxValues>
+    </Component>
+  </SubComponents>
+</Form>
